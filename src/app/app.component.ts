@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipeApp';
+
+  dataToLoad = 'recipe';
+  onNavigate(data: string) {
+    this.dataToLoad = data;
+  }
 }
