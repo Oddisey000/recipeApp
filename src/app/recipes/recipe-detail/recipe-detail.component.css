@@ -2,3 +2,9 @@
   max-height: 18rem;
   border-radius: .5rem;
 }
+.dropdown-element {
+  cursor: pointer;
+}
+.dropdown-element:active {
+  background-color: #f8f9fa;
+}

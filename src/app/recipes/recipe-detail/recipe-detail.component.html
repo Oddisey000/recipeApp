@@ -18,9 +18,13 @@
       <div
         [ngClass]="{'show':dropDownMarker.isShow}"
         class="dropdown-menu">
-        <a class="dropdown-item" href="#">Shopping list</a>
-        <a class="dropdown-item" href="#">Edit recipe</a>
-        <a class="dropdown-item" href="#">Delete Recipe</a>
+        <a 
+          class="dropdown-item dropdown-element"
+          (click)="onAddToShoppingList()">To Shopping list</a>
+        <a 
+          class="dropdown-item dropdown-element"
+          (click)="onEditRecipe()">Edit recipe</a>
+        <a class="dropdown-item dropdown-element">Delete Recipe</a>
       </div>
     </div>
   </div>
@@ -32,6 +36,12 @@
 </div>
 <div class="row">
   <div class="col-xl-12">
-    <p>Ingredients</p>
+    <ul class="list-group">
+      <li 
+        class="list-group-item"
+        *ngFor="let ingredient of recipe.ingredients">
+        {{ ingredient.name }} - {{ ingredient.amount }}
+      </li>
+    </ul>
   </div>
 </div>

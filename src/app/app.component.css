@@ -1,0 +1,16 @@
+@media only screen and (max-width: 1200px) {
+  .container {
+    font-size: .9rem;
+  } 
+}
+@media only screen and (max-width: 1000px) {
+  .container {
+    font-size: .9rem;
+    min-width: 100%;
+  } 
+}
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 60%;
+  }
+}

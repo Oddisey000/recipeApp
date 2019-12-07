@@ -6,11 +6,19 @@
 
   <div class="collapse navbar-collapse mr-xl-5" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#" (click)="onSelect('recipe')">Recipe</a>
+      <li 
+        class="nav-item"
+        routerLinkActive="active">
+        <a
+          class="nav-link" 
+          [routerLink]="['/recipes']">Recipe</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" (click)="onSelect('shopping-list')">Shopping List</a>
+      <li 
+        class="nav-item"
+        routerLinkActive="active">
+        <a 
+          class="nav-link" 
+          [routerLink]="['shopping-list']">Shopping List</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
@@ -18,13 +26,13 @@
         appDropdown
         #dropDownMarker="appDropdown"
         class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
+        <a class="nav-link dropdown-toggle dropdown-element" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
         <div
           [ngClass]="{'show':dropDownMarker.isShow}"
           class="dropdown-menu dropdown-menu-right"
           aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Save Data</a>
-          <a class="dropdown-item" href="#">Fetch Data</a>
+          <a class="dropdown-item dropdown-element">Save Data</a>
+          <a class="dropdown-item dropdown-element">Fetch Data</a>
         </div>
       </li>
     </ul>
