@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'recipeApp';
-
-  dataToLoad = 'recipe';
-  onNavigate(data: string) {
-    this.dataToLoad = data;
-  }
+  
 }
