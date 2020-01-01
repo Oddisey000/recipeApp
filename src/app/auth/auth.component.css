@@ -1,0 +1,8 @@
+.btn-secondary:focus,
+.btn-secondary:active{
+    box-shadow:none !important;
+    outline:0px !important;
+}
+#spinner {
+    text-align: center;
+}

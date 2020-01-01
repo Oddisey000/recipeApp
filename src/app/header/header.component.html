@@ -8,24 +8,40 @@
     <ul class="navbar-nav mr-auto">
       <li 
         class="nav-item"
-        routerLinkActive="active">
+        routerLinkActive="active"
+        *ngIf="isAuthenticated">
         <a
           class="nav-link" 
           [routerLink]="['/recipes']">Recipe</a>
       </li>
       <li 
         class="nav-item"
+        routerLinkActive="active"
+        *ngIf="!isAuthenticated">
+        <a 
+          class="nav-link" 
+          [routerLink]="['/auth']">Authenticate</a>
+      </li>
+      <li 
+        class="nav-item"
         routerLinkActive="active">
         <a 
           class="nav-link" 
-          [routerLink]="['shopping-list']">Shopping List</a>
+          [routerLink]="['/shopping-list']">Shopping List</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
       <li
+        *ngIf="isAuthenticated">
+        <a 
+          class="nav-link dropdown-element"
+          (click)="onLogOut()">Logout</a>
+      </li>
+      <li
         appDropdown
         #dropDownMarker="appDropdown"
-        class="nav-item dropdown">
+        class="nav-item dropdown"
+        *ngIf="isAuthenticated">
         <a class="nav-link dropdown-toggle dropdown-element" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
         <div
           [ngClass]="{'show':dropDownMarker.isShow}"
