@@ -19,9 +19,6 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
     this.ingredientChangeSub = this.shoppingListService.ingredientsChanged.subscribe(
       (ingredients: ingredient[]) => {
         this.ingredients = ingredients;
-        for (let ingredient of ingredients) {
-          ingredient.name.toLowerCase();
-        }
       }
     );
   }

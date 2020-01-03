@@ -40,7 +40,8 @@
             *ngIf="editMode">Delete</button>
           <button 
             class="btn btn-primary ml-1" type="button"
-            (click)="onClear()">Clear</button>
+            (click)="onClear()"
+            *ngIf="formLocalReference.valid">Clear</button>
         </div>
       </div>
     </form>
