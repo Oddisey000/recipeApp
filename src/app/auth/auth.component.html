@@ -2,16 +2,6 @@
   appPlaceholder></ng-template>
 <div class="row justify-content-center">
   <div class="col-md-6 col-xs-12">
-    <!--<div
-      *ngIf="isError"
-      class="alert alert-danger">
-      <p>{{ isError }}</p>
-    </div>
-    <app-alert
-      [message]="isError"
-      *ngIf="isError"
-      (close)="onHandleError()">
-    </app-alert>-->
     <div id="spinner" *ngIf="isLoading">
       <app-loading-spinner></app-loading-spinner>
     </div>
@@ -52,5 +42,9 @@
           type="button">Switch to {{ isLoginMode ? 'Sign Up' : 'Login' }}</button>
       </div>
     </form>
+    <br>
+    <div *ngIf="!isLoading">
+      <a id="gitlink" class="lead float-right" href="https://github.com/Oddisey000/recipeApp">Project on github</a>
+    </div>
   </div>
 </div>
