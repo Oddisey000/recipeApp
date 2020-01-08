@@ -11,6 +11,7 @@ import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core.module';
 import * as fromApp from './ngrx-store/app.reducer';
 import { AuthEffects } from './auth/ngrx-store/auth.effects';
+import { RecipeEffects } from './recipes/ngrx-store/recipe.effects';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { AuthEffects } from './auth/ngrx-store/auth.effects';
     HttpClientModule,
     AppRoutingModule,
     StoreModule.forRoot(fromApp.appReducer),
-    EffectsModule.forRoot([AuthEffects]),
+    EffectsModule.forRoot([AuthEffects, RecipeEffects]),
     SharedModule,
     CoreModule
   ],
